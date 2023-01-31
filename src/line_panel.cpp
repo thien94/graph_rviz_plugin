@@ -235,6 +235,7 @@ void LinePanel::load(const rviz::Config &config)
   graphInit();
   graphSettingsUpdate();
   Q_EMIT enableLegend(legend_enable_);
+  startPauseClicked();
 }
 
 void LinePanel::save(rviz::Config config) const
@@ -293,7 +294,6 @@ void LinePanel::startPauseClicked()
 
     return;
   }
-
   else
   {
     graph_refresh_timer_->stop();
