@@ -12930,7 +12930,8 @@ QCustomPlot::QCustomPlot(QWidget *parent) :
   yAxis2 = defaultAxisRect->axis(QCPAxis::atRight);
   legend = new QCPLegend;
   legend->setVisible(false);
-  defaultAxisRect->insetLayout()->addElement(legend, Qt::AlignRight|Qt::AlignTop);
+  // defaultAxisRect->insetLayout()->addElement(legend, Qt::AlignRight|Qt::AlignTop); // Default
+  defaultAxisRect->insetLayout()->addElement(legend, Qt::AlignLeft|Qt::AlignTop); // For UWB
   defaultAxisRect->insetLayout()->setMargins(QMargins(12, 12, 12, 12));
 
   defaultAxisRect->setLayer(QLatin1String("background"));
